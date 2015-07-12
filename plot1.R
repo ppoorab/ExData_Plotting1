@@ -1,7 +1,0 @@
-ihpc=read.table("household_power_consumption.txt",header=T,na.strings = "?",sep=";",stringsAsFactors = FALSE)
-str(ihpc)
-ihpc$Date=as.Date(ihpc$Date,format="%d/%m/%Y")
-str(ihpc)
-ihpc=subset(ihpc,Date >="2007-02-01" & Date<="2007-02-02")
-str(ihpc)
-hist(ihpc$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",ylab="Frequency",main="Global Active Power")
